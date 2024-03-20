@@ -1,0 +1,5 @@
+torch
+streamlit
+librosa
+pandas
+tqdm
