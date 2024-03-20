@@ -57,22 +57,22 @@ with open(os.path.join(csv_dir, 'train.csv'), 'w', newline='') as f_train, \
 
                 # Write the name, full path, and label to the appropriate .csv file
                 if model_name == 'IDMA':
-                    if model_file_count[model_name][0] < 7500:  # Training set
+                    if model_file_count[model_name][0] < 75:  # Training set
                         writer_train.writerow([name, full_path, label])
                         model_file_count[model_name][0] += 1
-                    elif model_file_count[model_name][1] < 1500:  # Validation set
+                    elif model_file_count[model_name][1] < 15:  # Validation set
                         writer_validate.writerow([name, full_path, label])
                         model_file_count[model_name][1] += 1
-                    elif model_file_count[model_name][2] < 1300:  # Evaluation set
+                    elif model_file_count[model_name][2] < 13:  # Evaluation set
                         writer_evaluate.writerow([name, full_path, label])
                         model_file_count[model_name][2] += 1
                 else:
-                    if model_file_count[model_name][0] < 900:  # Training set
+                    if model_file_count[model_name][0] < 9:  # Training set
                         writer_train.writerow([name, full_path, label])
                         model_file_count[model_name][0] += 1
-                    elif model_file_count[model_name][1] < 300:  # Validation set
+                    elif model_file_count[model_name][1] < 3:  # Validation set
                         writer_validate.writerow([name, full_path, label])
                         model_file_count[model_name][1] += 1
-                    elif model_file_count[model_name][2] < 300:  # Evaluation set
+                    elif model_file_count[model_name][2] < 3:  # Evaluation set
                         writer_evaluate.writerow([name, full_path, label])
                         model_file_count[model_name][2] += 1
